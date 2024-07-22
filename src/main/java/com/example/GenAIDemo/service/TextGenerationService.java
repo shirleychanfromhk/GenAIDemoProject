@@ -16,11 +16,11 @@ import dev.langchain4j.model.vertexai.VertexAiLanguageModel;
 public class TextGenerationService {
     VertexAiLanguageModel model = VertexAiLanguageModel.builder()
             .endpoint("us-central1-aiplatform.googleapis.com:443")
-            .project("my-genai-project-429014")
-            .location("us-central1")
+            .project("YOUR_GCP_PROJECT_ID")
+            .location("YOUR_GCP_PROJECT_LOCATION")
             .publisher("google")
             .modelName("text-bison@001")
-            .maxOutputTokens(20)
+            .maxOutputTokens("THE_TOKEN_AMOUNT_YOU_LIKE_TO_SPEND")
             .build();
 
     public String interctResponse(String questionString) {
