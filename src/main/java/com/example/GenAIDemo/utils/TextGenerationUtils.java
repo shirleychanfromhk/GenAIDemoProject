@@ -25,5 +25,16 @@ public class TextGenerationUtils {
 
         return promptTemplate;
     }
+    public static VertexAiLanguageModel modelBuild() {
+        VertexAiLanguageModel model = VertexAiLanguageModel.builder()
+                .endpoint("YOUR_GOOGLEAPI_ENDPOINT")
+                .project("YOUR_GCP_PROJECT_ID")
+                .location("us-central1")
+                .publisher("google")
+                .modelName("text-bison@001")
+                .maxOutputTokens(YOUR_PREFERED_TOKEN_AMOUNT)
+                .build();
 
+        return model;
+    }
 }
