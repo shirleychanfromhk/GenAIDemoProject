@@ -27,7 +27,7 @@ public class TextGenerationUtils {
     }
     public static VertexAiLanguageModel modelBuild() {
         VertexAiLanguageModel model = VertexAiLanguageModel.builder()
-                .endpoint("YOUR_GOOGLEAPI_ENDPOINT")
+                .endpoint("us-central1-aiplatform.googleapis.com:443")
                 .project("YOUR_GCP_PROJECT_ID")
                 .location("us-central1")
                 .publisher("google")
