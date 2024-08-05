@@ -14,14 +14,7 @@ import dev.langchain4j.model.vertexai.VertexAiLanguageModel;
 
 @Service
 public class TextGenerationService {
-    VertexAiLanguageModel model = VertexAiLanguageModel.builder()
-            .endpoint("us-central1-aiplatform.googleapis.com:443")
-            .project("YOUR_GCP_PROJECT_ID")
-            .location("YOUR_GCP_PROJECT_LOCATION")
-            .publisher("google")
-            .modelName("text-bison@001")
-            .maxOutputTokens("THE_TOKEN_AMOUNT_YOU_LIKE_TO_SPEND")
-            .build();
+    VertexAiLanguageModel model = TextGenerationUtils.modelBuild();
 
     public String interctResponse(String questionString) {
         Response<String> response = model.generate(questionString);
